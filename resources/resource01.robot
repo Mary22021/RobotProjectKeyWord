@@ -17,3 +17,5 @@ lire donnees cellule
     ${cell_data}=    recuperer_donnees_cellules    ${sheetname}    ${row}    ${cell}
     [Return]    ${cell_data}
 
+# faire capture ecran 
+#     capture_screenshot 

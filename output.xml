@@ -1,7 +1,68 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.0.2 (Python 3.11.1 on win32)" generated="20230424 18:50:20.813" rpa="false" schemaversion="3">
-<suite id="s1" name="Demo" source="c:\Users\LENOVO\Desktop\RobotProject\testCases\demo.robot">
-<test id="s1-t1" name="tc03" line="28">
+<robot generator="Robot 6.0.2 (Python 3.10.2 on win32)" generated="20230424 20:28:33.662" rpa="false" schemaversion="3">
+<suite id="s1" name="Demo" source="C:\Users\Fatna\projects\TAUTO-2\ProjetRobot2\testCases\demo.robot">
+<test id="s1-t1" name="tc01" line="6">
+<kw name="lire nombre ligne" library="resource01">
+<var>${ligne}</var>
+<arg>data</arg>
+<kw name="Recuperer Max Ligne" library="readdata">
+<var>${max_row}</var>
+<arg>${sheetname}</arg>
+<msg timestamp="20230424 20:28:35.312" level="INFO">${max_row} = 4</msg>
+<status status="PASS" starttime="20230424 20:28:35.311" endtime="20230424 20:28:35.312"/>
+</kw>
+<msg timestamp="20230424 20:28:35.318" level="INFO">${ligne} = 4</msg>
+<status status="PASS" starttime="20230424 20:28:35.310" endtime="20230424 20:28:35.318"/>
+</kw>
+<kw name="lire nombre colonne" library="resource01">
+<var>${colonne}</var>
+<arg>data</arg>
+<kw name="Recuperer Max Colonne" library="readdata">
+<var>${max_col}</var>
+<arg>${sheetname}</arg>
+<msg timestamp="20230424 20:28:35.327" level="INFO">${max_col} = 2</msg>
+<status status="PASS" starttime="20230424 20:28:35.326" endtime="20230424 20:28:35.327"/>
+</kw>
+<msg timestamp="20230424 20:28:35.332" level="INFO">${colonne} = 2</msg>
+<status status="PASS" starttime="20230424 20:28:35.325" endtime="20230424 20:28:35.332"/>
+</kw>
+<kw name="lire donnees cellule" library="resource01">
+<var>${cellule}</var>
+<arg>data</arg>
+<arg>3</arg>
+<arg>2</arg>
+<kw name="Recuperer Donnees Cellules" library="readdata">
+<var>${cell_data}</var>
+<arg>${sheetname}</arg>
+<arg>${row}</arg>
+<arg>${cell}</arg>
+<msg timestamp="20230424 20:28:35.344" level="INFO">${cell_data} = admin124</msg>
+<status status="PASS" starttime="20230424 20:28:35.338" endtime="20230424 20:28:35.345"/>
+</kw>
+<msg timestamp="20230424 20:28:35.367" level="INFO">${cellule} = admin124</msg>
+<status status="PASS" starttime="20230424 20:28:35.337" endtime="20230424 20:28:35.367"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>le max de ligne est : ${ligne}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230424 20:28:35.380" level="INFO">le max de ligne est : 4</msg>
+<status status="PASS" starttime="20230424 20:28:35.379" endtime="20230424 20:28:35.380"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>le max de colonne est : ${colonne}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230424 20:28:35.386" level="INFO">le max de colonne est : 2</msg>
+<status status="PASS" starttime="20230424 20:28:35.385" endtime="20230424 20:28:35.386"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>la cellule est : ${cellule}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230424 20:28:35.393" level="INFO">la cellule est : admin124</msg>
+<status status="PASS" starttime="20230424 20:28:35.392" endtime="20230424 20:28:35.393"/>
+</kw>
+<status status="PASS" starttime="20230424 20:28:35.308" endtime="20230424 20:28:35.400"/>
+</test>
+<test id="s1-t2" name="tc02" line="15">
 <kw name="lire donnees cellule" library="resource01">
 <var>${url}</var>
 <arg>opencart</arg>
@@ -12,11 +73,111 @@
 <arg>${sheetname}</arg>
 <arg>${row}</arg>
 <arg>${cell}</arg>
-<msg timestamp="20230424 18:50:21.277" level="INFO">${cell_data} = https://demo.opencart.com/admin/index.php?route=common/login</msg>
-<status status="PASS" starttime="20230424 18:50:21.277" endtime="20230424 18:50:21.279"/>
+<msg timestamp="20230424 20:28:35.411" level="INFO">${cell_data} = https://demo.opencart.com/admin/index.php?route=common/login</msg>
+<status status="PASS" starttime="20230424 20:28:35.410" endtime="20230424 20:28:35.411"/>
 </kw>
-<msg timestamp="20230424 18:50:21.280" level="INFO">${url} = https://demo.opencart.com/admin/index.php?route=common/login</msg>
-<status status="PASS" starttime="20230424 18:50:21.276" endtime="20230424 18:50:21.281"/>
+<msg timestamp="20230424 20:28:35.416" level="INFO">${url} = https://demo.opencart.com/admin/index.php?route=common/login</msg>
+<status status="PASS" starttime="20230424 20:28:35.408" endtime="20230424 20:28:35.416"/>
+</kw>
+<kw name="lire donnees cellule" library="resource01">
+<var>${username}</var>
+<arg>opencart</arg>
+<arg>2</arg>
+<arg>2</arg>
+<kw name="Recuperer Donnees Cellules" library="readdata">
+<var>${cell_data}</var>
+<arg>${sheetname}</arg>
+<arg>${row}</arg>
+<arg>${cell}</arg>
+<msg timestamp="20230424 20:28:35.422" level="INFO">${cell_data} = demo</msg>
+<status status="PASS" starttime="20230424 20:28:35.421" endtime="20230424 20:28:35.423"/>
+</kw>
+<msg timestamp="20230424 20:28:35.429" level="INFO">${username} = demo</msg>
+<status status="PASS" starttime="20230424 20:28:35.420" endtime="20230424 20:28:35.429"/>
+</kw>
+<kw name="lire donnees cellule" library="resource01">
+<var>${password}</var>
+<arg>opencart</arg>
+<arg>2</arg>
+<arg>3</arg>
+<kw name="Recuperer Donnees Cellules" library="readdata">
+<var>${cell_data}</var>
+<arg>${sheetname}</arg>
+<arg>${row}</arg>
+<arg>${cell}</arg>
+<msg timestamp="20230424 20:28:35.436" level="INFO">${cell_data} = demo</msg>
+<status status="PASS" starttime="20230424 20:28:35.435" endtime="20230424 20:28:35.436"/>
+</kw>
+<msg timestamp="20230424 20:28:35.444" level="INFO">${password} = demo</msg>
+<status status="PASS" starttime="20230424 20:28:35.434" endtime="20230424 20:28:35.444"/>
+</kw>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${url}</arg>
+<arg>gc</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230424 20:28:35.450" level="INFO">Opening browser 'gc' to base url 'https://demo.opencart.com/admin/index.php?route=common/login'.</msg>
+<status status="PASS" starttime="20230424 20:28:35.449" endtime="20230424 20:28:38.191"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230424 20:28:38.201" endtime="20230424 20:28:38.362"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:input-username</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230424 20:28:38.366" level="INFO">Typing text 'demo' into text field 'id:input-username'.</msg>
+<status status="PASS" starttime="20230424 20:28:38.363" endtime="20230424 20:28:38.511"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>id:input-password</arg>
+<arg>${password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20230424 20:28:38.527" level="INFO">Typing password into text field 'id:input-password'.</msg>
+<msg timestamp="20230424 20:28:38.589" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20230424 20:28:38.658" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20230424 20:28:38.526" endtime="20230424 20:28:38.659"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230424 20:28:40.668" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230424 20:28:38.665" endtime="20230424 20:28:40.668"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>xpath://button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230424 20:28:40.677" level="INFO">Clicking button 'xpath://button'.</msg>
+<status status="PASS" starttime="20230424 20:28:40.676" endtime="20230424 20:28:40.822"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230424 20:28:45.844" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20230424 20:28:40.829" endtime="20230424 20:28:45.845"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230424 20:28:45.852" endtime="20230424 20:28:48.313"/>
+</kw>
+<status status="PASS" starttime="20230424 20:28:35.406" endtime="20230424 20:28:48.316"/>
+</test>
+<test id="s1-t3" name="tc03" line="28">
+<kw name="lire donnees cellule" library="resource01">
+<var>${url}</var>
+<arg>opencart</arg>
+<arg>2</arg>
+<arg>1</arg>
+<kw name="Recuperer Donnees Cellules" library="readdata">
+<var>${cell_data}</var>
+<arg>${sheetname}</arg>
+<arg>${row}</arg>
+<arg>${cell}</arg>
+<msg timestamp="20230424 20:28:48.332" level="INFO">${cell_data} = https://demo.opencart.com/admin/index.php?route=common/login</msg>
+<status status="PASS" starttime="20230424 20:28:48.331" endtime="20230424 20:28:48.332"/>
+</kw>
+<msg timestamp="20230424 20:28:48.340" level="INFO">${url} = https://demo.opencart.com/admin/index.php?route=common/login</msg>
+<status status="PASS" starttime="20230424 20:28:48.329" endtime="20230424 20:28:48.340"/>
 </kw>
 <kw name="lire nombre ligne" library="resource01">
 <var>${lignes}</var>
@@ -24,11 +185,11 @@
 <kw name="Recuperer Max Ligne" library="readdata">
 <var>${max_row}</var>
 <arg>${sheetname}</arg>
-<msg timestamp="20230424 18:50:21.282" level="INFO">${max_row} = 5</msg>
-<status status="PASS" starttime="20230424 18:50:21.282" endtime="20230424 18:50:21.282"/>
+<msg timestamp="20230424 20:28:48.352" level="INFO">${max_row} = 5</msg>
+<status status="PASS" starttime="20230424 20:28:48.351" endtime="20230424 20:28:48.352"/>
 </kw>
-<msg timestamp="20230424 18:50:21.283" level="INFO">${lignes} = 5</msg>
-<status status="PASS" starttime="20230424 18:50:21.282" endtime="20230424 18:50:21.283"/>
+<msg timestamp="20230424 20:28:48.358" level="INFO">${lignes} = 5</msg>
+<status status="PASS" starttime="20230424 20:28:48.350" endtime="20230424 20:28:48.358"/>
 </kw>
 <for flavor="IN RANGE">
 <var>${i}</var>
@@ -46,11 +207,11 @@
 <arg>${sheetname}</arg>
 <arg>${row}</arg>
 <arg>${cell}</arg>
-<msg timestamp="20230424 18:50:21.286" level="INFO">${cell_data} = test1</msg>
-<status status="PASS" starttime="20230424 18:50:21.286" endtime="20230424 18:50:21.286"/>
+<msg timestamp="20230424 20:28:48.373" level="INFO">${cell_data} = test1</msg>
+<status status="PASS" starttime="20230424 20:28:48.371" endtime="20230424 20:28:48.373"/>
 </kw>
-<msg timestamp="20230424 18:50:21.288" level="INFO">${username} = test1</msg>
-<status status="PASS" starttime="20230424 18:50:21.285" endtime="20230424 18:50:21.288"/>
+<msg timestamp="20230424 20:28:48.398" level="INFO">${username} = test1</msg>
+<status status="PASS" starttime="20230424 20:28:48.369" endtime="20230424 20:28:48.399"/>
 </kw>
 <kw name="lire donnees cellule" library="resource01">
 <var>${password}</var>
@@ -62,68 +223,81 @@
 <arg>${sheetname}</arg>
 <arg>${row}</arg>
 <arg>${cell}</arg>
-<msg timestamp="20230424 18:50:21.289" level="INFO">${cell_data} = test1</msg>
-<status status="PASS" starttime="20230424 18:50:21.289" endtime="20230424 18:50:21.289"/>
+<msg timestamp="20230424 20:28:48.407" level="INFO">${cell_data} = test1</msg>
+<status status="PASS" starttime="20230424 20:28:48.406" endtime="20230424 20:28:48.407"/>
 </kw>
-<msg timestamp="20230424 18:50:21.289" level="INFO">${password} = test1</msg>
-<status status="PASS" starttime="20230424 18:50:21.288" endtime="20230424 18:50:21.289"/>
+<msg timestamp="20230424 20:28:48.415" level="INFO">${password} = test1</msg>
+<status status="PASS" starttime="20230424 20:28:48.405" endtime="20230424 20:28:48.415"/>
 </kw>
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>${url}</arg>
 <arg>gc</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20230424 18:50:21.290" level="INFO">Opening browser 'gc' to base url 'https://demo.opencart.com/admin/index.php?route=common/login'.</msg>
-<status status="PASS" starttime="20230424 18:50:21.289" endtime="20230424 18:50:25.137"/>
+<msg timestamp="20230424 20:28:48.422" level="INFO">Opening browser 'gc' to base url 'https://demo.opencart.com/admin/index.php?route=common/login'.</msg>
+<status status="PASS" starttime="20230424 20:28:48.421" endtime="20230424 20:28:50.936"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20230424 18:50:25.137" endtime="20230424 18:50:25.261"/>
+<status status="PASS" starttime="20230424 20:28:50.941" endtime="20230424 20:28:51.080"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>id:input-username</arg>
 <arg>${username}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20230424 18:50:25.262" level="INFO">Typing text 'test1' into text field 'id:input-username'.</msg>
-<status status="PASS" starttime="20230424 18:50:25.261" endtime="20230424 18:50:25.513"/>
+<msg timestamp="20230424 20:28:51.083" level="INFO">Typing text 'test1' into text field 'id:input-username'.</msg>
+<status status="PASS" starttime="20230424 20:28:51.081" endtime="20230424 20:28:51.263"/>
 </kw>
 <kw name="Input Password" library="SeleniumLibrary">
 <arg>id:input-password</arg>
 <arg>${password}</arg>
 <doc>Types the given password into the text field identified by ``locator``.</doc>
-<msg timestamp="20230424 18:50:25.515" level="INFO">Typing password into text field 'id:input-password'.</msg>
-<msg timestamp="20230424 18:50:25.555" level="INFO">Temporally setting log level to: NONE</msg>
-<msg timestamp="20230424 18:50:25.595" level="INFO">Log level changed from NONE to INFO.</msg>
-<status status="PASS" starttime="20230424 18:50:25.513" endtime="20230424 18:50:25.596"/>
+<msg timestamp="20230424 20:28:51.273" level="INFO">Typing password into text field 'id:input-password'.</msg>
+<msg timestamp="20230424 20:28:51.335" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20230424 20:28:51.402" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20230424 20:28:51.271" endtime="20230424 20:28:51.402"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>2</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20230424 18:50:27.596" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20230424 18:50:25.596" endtime="20230424 18:50:27.596"/>
+<msg timestamp="20230424 20:28:53.418" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230424 20:28:51.408" endtime="20230424 20:28:53.418"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>id:input-username</arg>
+<arg>elementInput.png</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<msg timestamp="20230424 20:28:53.607" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="elementInput.png"&gt;&lt;img src="elementInput.png" width="400px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230424 20:28:53.425" endtime="20230424 20:28:53.608"/>
 </kw>
 <kw name="Click Button" library="SeleniumLibrary">
 <arg>xpath://button</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20230424 18:50:27.598" level="INFO">Clicking button 'xpath://button'.</msg>
-<status status="PASS" starttime="20230424 18:50:27.597" endtime="20230424 18:50:27.673"/>
+<msg timestamp="20230424 20:28:53.617" level="INFO">Clicking button 'xpath://button'.</msg>
+<status status="PASS" starttime="20230424 20:28:53.616" endtime="20230424 20:28:53.738"/>
 </kw>
 <kw name="Element Should Be Visible" library="SeleniumLibrary">
 <arg>id:alert</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20230424 18:50:27.759" level="INFO">Element 'id:alert' is displayed.</msg>
-<status status="PASS" starttime="20230424 18:50:27.673" endtime="20230424 18:50:27.760"/>
+<msg timestamp="20230424 20:28:53.797" level="INFO">Element 'id:alert' is displayed.</msg>
+<status status="PASS" starttime="20230424 20:28:53.747" endtime="20230424 20:28:53.798"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<arg>pageScreen.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20230424 20:28:54.176" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="pageScreen.png"&gt;&lt;img src="pageScreen.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230424 20:28:53.802" endtime="20230424 20:28:54.177"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>5</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20230424 18:50:32.760" level="INFO">Slept 5 seconds</msg>
-<status status="PASS" starttime="20230424 18:50:27.760" endtime="20230424 18:50:32.760"/>
+<msg timestamp="20230424 20:28:59.191" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20230424 20:28:54.183" endtime="20230424 20:28:59.191"/>
 </kw>
 <kw name="Close Browser" library="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20230424 18:50:32.760" endtime="20230424 18:50:34.934"/>
+<status status="PASS" starttime="20230424 20:28:59.196" endtime="20230424 20:29:01.625"/>
 </kw>
-<status status="PASS" starttime="20230424 18:50:21.284" endtime="20230424 18:50:34.935"/>
+<status status="PASS" starttime="20230424 20:28:48.368" endtime="20230424 20:29:01.626"/>
 </iter>
 <iter>
 <var name="${i}">4</var>
@@ -137,11 +311,11 @@
 <arg>${sheetname}</arg>
 <arg>${row}</arg>
 <arg>${cell}</arg>
-<msg timestamp="20230424 18:50:34.937" level="INFO">${cell_data} = test2</msg>
-<status status="PASS" starttime="20230424 18:50:34.936" endtime="20230424 18:50:34.937"/>
+<msg timestamp="20230424 20:29:01.629" level="INFO">${cell_data} = test2</msg>
+<status status="PASS" starttime="20230424 20:29:01.628" endtime="20230424 20:29:01.629"/>
 </kw>
-<msg timestamp="20230424 18:50:34.938" level="INFO">${username} = test2</msg>
-<status status="PASS" starttime="20230424 18:50:34.936" endtime="20230424 18:50:34.938"/>
+<msg timestamp="20230424 20:29:01.637" level="INFO">${username} = test2</msg>
+<status status="PASS" starttime="20230424 20:29:01.627" endtime="20230424 20:29:01.638"/>
 </kw>
 <kw name="lire donnees cellule" library="resource01">
 <var>${password}</var>
@@ -153,68 +327,81 @@
 <arg>${sheetname}</arg>
 <arg>${row}</arg>
 <arg>${cell}</arg>
-<msg timestamp="20230424 18:50:34.940" level="INFO">${cell_data} = test2</msg>
-<status status="PASS" starttime="20230424 18:50:34.939" endtime="20230424 18:50:34.940"/>
+<msg timestamp="20230424 20:29:01.646" level="INFO">${cell_data} = test2</msg>
+<status status="PASS" starttime="20230424 20:29:01.645" endtime="20230424 20:29:01.646"/>
 </kw>
-<msg timestamp="20230424 18:50:34.941" level="INFO">${password} = test2</msg>
-<status status="PASS" starttime="20230424 18:50:34.938" endtime="20230424 18:50:34.942"/>
+<msg timestamp="20230424 20:29:01.654" level="INFO">${password} = test2</msg>
+<status status="PASS" starttime="20230424 20:29:01.644" endtime="20230424 20:29:01.654"/>
 </kw>
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>${url}</arg>
 <arg>gc</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20230424 18:50:34.943" level="INFO">Opening browser 'gc' to base url 'https://demo.opencart.com/admin/index.php?route=common/login'.</msg>
-<status status="PASS" starttime="20230424 18:50:34.942" endtime="20230424 18:50:37.764"/>
+<msg timestamp="20230424 20:29:01.663" level="INFO">Opening browser 'gc' to base url 'https://demo.opencart.com/admin/index.php?route=common/login'.</msg>
+<status status="PASS" starttime="20230424 20:29:01.661" endtime="20230424 20:29:04.289"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20230424 18:50:37.764" endtime="20230424 18:50:37.897"/>
+<status status="PASS" starttime="20230424 20:29:04.299" endtime="20230424 20:29:04.440"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>id:input-username</arg>
 <arg>${username}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20230424 18:50:37.898" level="INFO">Typing text 'test2' into text field 'id:input-username'.</msg>
-<status status="PASS" starttime="20230424 18:50:37.897" endtime="20230424 18:50:38.020"/>
+<msg timestamp="20230424 20:29:04.442" level="INFO">Typing text 'test2' into text field 'id:input-username'.</msg>
+<status status="PASS" starttime="20230424 20:29:04.441" endtime="20230424 20:29:04.603"/>
 </kw>
 <kw name="Input Password" library="SeleniumLibrary">
 <arg>id:input-password</arg>
 <arg>${password}</arg>
 <doc>Types the given password into the text field identified by ``locator``.</doc>
-<msg timestamp="20230424 18:50:38.022" level="INFO">Typing password into text field 'id:input-password'.</msg>
-<msg timestamp="20230424 18:50:38.073" level="INFO">Temporally setting log level to: NONE</msg>
-<msg timestamp="20230424 18:50:38.129" level="INFO">Log level changed from NONE to INFO.</msg>
-<status status="PASS" starttime="20230424 18:50:38.020" endtime="20230424 18:50:38.130"/>
+<msg timestamp="20230424 20:29:04.610" level="INFO">Typing password into text field 'id:input-password'.</msg>
+<msg timestamp="20230424 20:29:04.670" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20230424 20:29:04.738" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20230424 20:29:04.609" endtime="20230424 20:29:04.738"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>2</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20230424 18:50:40.131" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20230424 18:50:38.130" endtime="20230424 18:50:40.131"/>
+<msg timestamp="20230424 20:29:06.755" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230424 20:29:04.744" endtime="20230424 20:29:06.755"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>id:input-username</arg>
+<arg>elementInput.png</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<msg timestamp="20230424 20:29:06.937" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="elementInput.png"&gt;&lt;img src="elementInput.png" width="400px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230424 20:29:06.762" endtime="20230424 20:29:06.938"/>
 </kw>
 <kw name="Click Button" library="SeleniumLibrary">
 <arg>xpath://button</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20230424 18:50:40.133" level="INFO">Clicking button 'xpath://button'.</msg>
-<status status="PASS" starttime="20230424 18:50:40.132" endtime="20230424 18:50:40.212"/>
+<msg timestamp="20230424 20:29:06.947" level="INFO">Clicking button 'xpath://button'.</msg>
+<status status="PASS" starttime="20230424 20:29:06.945" endtime="20230424 20:29:07.045"/>
 </kw>
 <kw name="Element Should Be Visible" library="SeleniumLibrary">
 <arg>id:alert</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20230424 18:50:40.279" level="INFO">Element 'id:alert' is displayed.</msg>
-<status status="PASS" starttime="20230424 18:50:40.212" endtime="20230424 18:50:40.279"/>
+<msg timestamp="20230424 20:29:07.096" level="INFO">Element 'id:alert' is displayed.</msg>
+<status status="PASS" starttime="20230424 20:29:07.052" endtime="20230424 20:29:07.097"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<arg>pageScreen.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20230424 20:29:07.491" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="pageScreen.png"&gt;&lt;img src="pageScreen.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230424 20:29:07.104" endtime="20230424 20:29:07.491"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>5</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20230424 18:50:45.281" level="INFO">Slept 5 seconds</msg>
-<status status="PASS" starttime="20230424 18:50:40.280" endtime="20230424 18:50:45.282"/>
+<msg timestamp="20230424 20:29:12.503" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20230424 20:29:07.499" endtime="20230424 20:29:12.503"/>
 </kw>
 <kw name="Close Browser" library="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20230424 18:50:45.282" endtime="20230424 18:50:47.466"/>
+<status status="PASS" starttime="20230424 20:29:12.508" endtime="20230424 20:29:14.928"/>
 </kw>
-<status status="PASS" starttime="20230424 18:50:34.935" endtime="20230424 18:50:47.467"/>
+<status status="PASS" starttime="20230424 20:29:01.627" endtime="20230424 20:29:14.929"/>
 </iter>
 <iter>
 <var name="${i}">5</var>
@@ -228,11 +415,11 @@
 <arg>${sheetname}</arg>
 <arg>${row}</arg>
 <arg>${cell}</arg>
-<msg timestamp="20230424 18:50:47.468" level="INFO">${cell_data} = test3</msg>
-<status status="PASS" starttime="20230424 18:50:47.468" endtime="20230424 18:50:47.469"/>
+<msg timestamp="20230424 20:29:14.932" level="INFO">${cell_data} = test3</msg>
+<status status="PASS" starttime="20230424 20:29:14.931" endtime="20230424 20:29:14.933"/>
 </kw>
-<msg timestamp="20230424 18:50:47.469" level="INFO">${username} = test3</msg>
-<status status="PASS" starttime="20230424 18:50:47.467" endtime="20230424 18:50:47.469"/>
+<msg timestamp="20230424 20:29:14.941" level="INFO">${username} = test3</msg>
+<status status="PASS" starttime="20230424 20:29:14.930" endtime="20230424 20:29:14.941"/>
 </kw>
 <kw name="lire donnees cellule" library="resource01">
 <var>${password}</var>
@@ -244,83 +431,98 @@
 <arg>${sheetname}</arg>
 <arg>${row}</arg>
 <arg>${cell}</arg>
-<msg timestamp="20230424 18:50:47.471" level="INFO">${cell_data} = test3</msg>
-<status status="PASS" starttime="20230424 18:50:47.470" endtime="20230424 18:50:47.471"/>
+<msg timestamp="20230424 20:29:14.961" level="INFO">${cell_data} = test3</msg>
+<status status="PASS" starttime="20230424 20:29:14.960" endtime="20230424 20:29:14.961"/>
 </kw>
-<msg timestamp="20230424 18:50:47.471" level="INFO">${password} = test3</msg>
-<status status="PASS" starttime="20230424 18:50:47.469" endtime="20230424 18:50:47.471"/>
+<msg timestamp="20230424 20:29:14.968" level="INFO">${password} = test3</msg>
+<status status="PASS" starttime="20230424 20:29:14.959" endtime="20230424 20:29:14.968"/>
 </kw>
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>${url}</arg>
 <arg>gc</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20230424 18:50:47.472" level="INFO">Opening browser 'gc' to base url 'https://demo.opencart.com/admin/index.php?route=common/login'.</msg>
-<status status="PASS" starttime="20230424 18:50:47.472" endtime="20230424 18:50:50.531"/>
+<msg timestamp="20230424 20:29:14.977" level="INFO">Opening browser 'gc' to base url 'https://demo.opencart.com/admin/index.php?route=common/login'.</msg>
+<status status="PASS" starttime="20230424 20:29:14.975" endtime="20230424 20:29:17.564"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20230424 18:50:50.532" endtime="20230424 18:50:50.657"/>
+<status status="PASS" starttime="20230424 20:29:17.572" endtime="20230424 20:29:17.715"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>id:input-username</arg>
 <arg>${username}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20230424 18:50:50.659" level="INFO">Typing text 'test3' into text field 'id:input-username'.</msg>
-<status status="PASS" starttime="20230424 18:50:50.658" endtime="20230424 18:50:50.941"/>
+<msg timestamp="20230424 20:29:17.717" level="INFO">Typing text 'test3' into text field 'id:input-username'.</msg>
+<status status="PASS" starttime="20230424 20:29:17.716" endtime="20230424 20:29:17.863"/>
 </kw>
 <kw name="Input Password" library="SeleniumLibrary">
 <arg>id:input-password</arg>
 <arg>${password}</arg>
 <doc>Types the given password into the text field identified by ``locator``.</doc>
-<msg timestamp="20230424 18:50:50.942" level="INFO">Typing password into text field 'id:input-password'.</msg>
-<msg timestamp="20230424 18:50:50.994" level="INFO">Temporally setting log level to: NONE</msg>
-<msg timestamp="20230424 18:50:51.051" level="INFO">Log level changed from NONE to INFO.</msg>
-<status status="PASS" starttime="20230424 18:50:50.942" endtime="20230424 18:50:51.052"/>
+<msg timestamp="20230424 20:29:17.869" level="INFO">Typing password into text field 'id:input-password'.</msg>
+<msg timestamp="20230424 20:29:17.930" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20230424 20:29:17.996" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20230424 20:29:17.868" endtime="20230424 20:29:17.996"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>2</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20230424 18:50:53.052" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20230424 18:50:51.052" endtime="20230424 18:50:53.052"/>
+<msg timestamp="20230424 20:29:20.004" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230424 20:29:18.001" endtime="20230424 20:29:20.005"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>id:input-username</arg>
+<arg>elementInput.png</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<msg timestamp="20230424 20:29:20.192" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="elementInput.png"&gt;&lt;img src="elementInput.png" width="400px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230424 20:29:20.017" endtime="20230424 20:29:20.192"/>
 </kw>
 <kw name="Click Button" library="SeleniumLibrary">
 <arg>xpath://button</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20230424 18:50:53.053" level="INFO">Clicking button 'xpath://button'.</msg>
-<status status="PASS" starttime="20230424 18:50:53.052" endtime="20230424 18:50:53.141"/>
+<msg timestamp="20230424 20:29:20.200" level="INFO">Clicking button 'xpath://button'.</msg>
+<status status="PASS" starttime="20230424 20:29:20.198" endtime="20230424 20:29:20.309"/>
 </kw>
 <kw name="Element Should Be Visible" library="SeleniumLibrary">
 <arg>id:alert</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20230424 18:50:53.174" level="INFO">Element 'id:alert' is displayed.</msg>
-<status status="PASS" starttime="20230424 18:50:53.142" endtime="20230424 18:50:53.175"/>
+<msg timestamp="20230424 20:29:20.359" level="INFO">Element 'id:alert' is displayed.</msg>
+<status status="PASS" starttime="20230424 20:29:20.314" endtime="20230424 20:29:20.359"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<arg>pageScreen.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20230424 20:29:20.684" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="pageScreen.png"&gt;&lt;img src="pageScreen.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230424 20:29:20.364" endtime="20230424 20:29:20.684"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>5</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20230424 18:50:58.176" level="INFO">Slept 5 seconds</msg>
-<status status="PASS" starttime="20230424 18:50:53.175" endtime="20230424 18:50:58.176"/>
+<msg timestamp="20230424 20:29:25.698" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20230424 20:29:20.691" endtime="20230424 20:29:25.698"/>
 </kw>
 <kw name="Close Browser" library="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20230424 18:50:58.176" endtime="20230424 18:51:00.384"/>
+<status status="PASS" starttime="20230424 20:29:25.706" endtime="20230424 20:29:28.151"/>
 </kw>
-<status status="PASS" starttime="20230424 18:50:47.467" endtime="20230424 18:51:00.384"/>
+<status status="PASS" starttime="20230424 20:29:14.930" endtime="20230424 20:29:28.152"/>
 </iter>
-<status status="PASS" starttime="20230424 18:50:21.284" endtime="20230424 18:51:00.385"/>
+<status status="PASS" starttime="20230424 20:28:48.367" endtime="20230424 20:29:28.153"/>
 </for>
-<status status="PASS" starttime="20230424 18:50:21.275" endtime="20230424 18:51:00.386"/>
+<tag>TC03</tag>
+<status status="PASS" starttime="20230424 20:28:48.326" endtime="20230424 20:29:28.154"/>
 </test>
-<status status="PASS" starttime="20230424 18:50:20.817" endtime="20230424 18:51:00.389"/>
+<status status="PASS" starttime="20230424 20:28:33.809" endtime="20230424 20:29:28.162"/>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0" skip="0">All Tests</stat>
+<stat pass="3" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
+<stat pass="1" fail="0" skip="0">TC03</stat>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="Demo">Demo</stat>
+<stat pass="3" fail="0" skip="0" id="s1" name="Demo">Demo</stat>
 </suite>
 </statistics>
 <errors>

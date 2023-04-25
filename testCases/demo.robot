@@ -26,6 +26,7 @@ tc02
     Close Browser
 
 tc03
+    [Tags]    TC03
     ${url}    lire donnees cellule    opencart    2    1
     ${lignes}    lire nombre ligne    opencart    
     FOR    ${i}    IN RANGE    3    ${lignes}+1
@@ -36,8 +37,12 @@ tc03
       Input Text    id:input-username    ${username}
       Input Password    id:input-password    ${password}
       Sleep    2
+      Capture Element Screenshot    id:input-username    elementInput.png
+
       Click Button    xpath://button 
       Element Should Be Visible    id:alert
+      Capture Page Screenshot    pageScreen.png
+      # faire capture ecran 
       Sleep    5
       Close Browser   
     END
