@@ -1,2 +1,6 @@
 il faut mettre la derniere version de chromedriver.exe dans 
 C:\Users\XXXX\AppData\Local\Programs\Python\Python310\Scripts
+//Taper la commande suivant pour generer les rapports dans le terminal 
+robot --listener allure_robotframework:allure_Repports ./testCases/demo.robot
+//Taper la commande suivant pour generer les rapports dans le web dans cmd du repetoire en cours de projets 
+allure serve allure_repports
